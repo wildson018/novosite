@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <title>Template base</title>
+</head>
+<body>
+     <!-- Responsive navbar-->
+     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #008000;">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">Diario de Notas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5">
+       
+        <!-- Call to Action-->
+        <div class="card text-white my-5 py-4 text-center" style="background-color: #006400;">
+            <div class="card-body"><p class="text-white m-0">Seja bem vindo(a) ao portal de notas, aqui você encontrarar todos os dados das suas disciplinas.</p></div>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100" style = "background-color: #D3D3D3;">
+                    <div class="card-body" style ="background-color: #FFFFFF;">
+                        <h2 class="card-title">Lançar notas</h2>
+                        <p class="card-text">Nesta opção você poderar lançar todas as notas referente ás suas disciplinas, discriminando todos os respectivos detalhes.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Clique aqui</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100" style = "background-color: #D3D3D3;">
+                    <div class="card-body" style ="background-color: #FFFFFF;">
+                        <h2 class="card-title">Alterar Notas</h2>
+                        <p class="card-text">Nesta opção você poderar alterar todas as notas ja lançadas referente ás suas disciplinas, inclusive excluir algumas notas.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Clique aqui</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100" style = "background-color: #D3D3D3;">
+                    <div class="card-body" style ="background-color: #FFFFFF;">
+                        <h2 class="card-title">Visualizar Notas</h2>
+                        <p class="card-text">Nesta opção você poderar visualizar todas as notas já lançadas referente ás suas disciplinas .</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Clique aqui</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="fixed-botton" style="background-color: #008000;">
+        <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Diario de Notas 2024</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
