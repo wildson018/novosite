@@ -4,4 +4,20 @@
 
 {% block titulo %}Visualizar Notas{% endblock %}
 
-{% block conteudo %}Aqui dentro vai o conteúdo...{% endblock %}
+{% block conteudo %}
+<h3>Visualização de notas Regitradas</h3>
+<hr>
+<form action="{% url 'visualizar'%}" method="POST">
+    {% csrf_token %}
+    <div class="filter">
+        <label for = "disciplinaName">Filtar por disciplina:</label>
+        <select name = "disciplina">
+            <option>Todas as disciplinas</option>
+            {% for campo in lista_notas %}
+                <option>{{ campo.disciplina }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class = "btn btn-primary">Filtrar</button>
+    </div>
+</form>
+{% endblock %}
