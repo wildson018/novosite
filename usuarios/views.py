@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django, logout as logout_django
 from .models import Nota
+from django.urls import reverse
 
 def login (request):
     if request.method == "GET":
@@ -91,7 +92,7 @@ def excluir(request, pk):
    if request.user.is_authenticated:
      disciplina_selecionada = Nota.objects.get(pk=pk)
      disciplina_selecionada.delete()
-     return HttpResponseRedirect(rewerse('alterra'))
+     return HttpResponseRedirect(reverse('alterar'))
    else:
       return HttpResponse("Faça o login para acessar! ")   
 
